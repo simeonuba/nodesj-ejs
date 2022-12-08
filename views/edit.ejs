@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Ofmax.co.uk>
+    <meta name="keywords" content="Logistics,Shipping and delivery" />
+    <meta name="author" content="Ofmax" />
+    <!-- The above 6 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title -->
+    <title>Ofmax</title>
+
+    <!-- Styles -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,500,700,800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="/static/assets/plugins/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="/static/assets/plugins/font-awesome/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="/static/assets/plugins/perfectscroll/perfect-scrollbar.css"
+      rel="stylesheet"
+    />
+    <link href="/static/assets/plugins/pace/pace.css" rel="stylesheet" />
+
+    <!-- Theme Styles -->
+    <link href="/static/assets/css/main.min.css" rel="stylesheet" />
+    <link href="/static/assets/css/custom.css" rel="stylesheet" />
+
+    <link
+      href="/static/assets/plugins/DataTables/datatables.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body class="pace-done no-loader">
+    <div class="page-container">
+      <div class="page-sidebar ps">
+        <a class="logo" href="index.html">Ofmax.co.uk</a>
+        <ul class="list-unstyled accordion-menu ps">
+          <li>
+            <a href="index.html#"
+              ><i data-feather="activity"></i>Dashboard<i
+                class="fas fa-chevron-right dropdown-icon"
+              ></i
+            ></a>
+          </li>
+          <li>
+            <a href="orders.html"
+              ><i data-feather="aperture"></i>My Orders<i
+                class="fas fa-chevron-right dropdown-icon"
+              ></i
+            ></a>
+          </li>
+
+          <li>
+            <a href="edit.html"
+              ><i data-feather="aperture"></i>Edit Account<i
+                class="fas fa-chevron-right dropdown-icon"
+              ></i
+            ></a>
+          </li>
+          <li>
+            <a href="support.html"
+              ><i data-feather="aperture"></i>Support<i
+                class="fas fa-chevron-right dropdown-icon"
+              ></i
+            ></a>
+          </li>
+        </ul>
+        <a href="blank-page.html#" id="sidebar-collapsed-toggle"
+          ><i data-feather="arrow-right"></i
+        ></a>
+      </div>
+      <div class="page-content">
+        <div class="page-header">
+          <nav class="navbar navbar-expand-lg d-flex justify-content-between">
+            <div class="header-title flex-fill">
+              <a href="index.html#" id="sidebar-toggle"
+                ><i data-feather="arrow-left"></i
+              ></a>
+              <h5>Dashboard</h5>
+            </div>
+            <div class="header-sarch">
+              <a href="" class="btn btn-secondary">Logout</a>
+            </div>
+          </nav>
+        </div>
+        <div class="main-wrapper">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="card card-bg">
+                <div class="card-body">
+                  <h4>Edit Account</h4>
+                  <div id="target"></div>
+                  <br />
+                  <form action="#">
+                    <div class="row mb-3">
+                      <label for="inputEmail3" class="col-sm-2 col-form-label"
+                        >Full Name</label
+                      >
+                      <div class="col-sm-10">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="fullname"
+                          name="fullname"
+                          value="<%= ofmaxu.user.firstname %> <%= ofmaxu.user.lastname
+                          %>"
+                        />
+                      </div>
+                    </div>
+                    <div class="row mb-3">
+                      <label
+                        for="inputPassword3"
+                        class="col-sm-2 col-form-label"
+                        >Email Address</label
+                      >
+                      <div class="col-sm-10">
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="email"
+                          name="email"
+                          value="<%= ofmaxu.user.email %> "
+                          disabled
+                        />
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="form-label">Phone Number</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="phone"
+                        name="phone"
+                        value="<%= ofmaxu.user.phone %> "
+                        placeholder="Phone"
+                      />
+                    </div>
+
+                    <div class="mb-3">
+                      <label for="form-label">Full Address</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="address"
+                        name="address"
+                        value="<%= ofmaxu.user.address %> "
+                        placeholder="Address"
+                      />
+                    </div>
+
+                    <div class="col-md-6">
+                      <label for="validationCustom03" class="form-label"
+                        >City</label
+                      >
+                      <input
+                        type="text"
+                        value="<%= ofmaxu.user.city %> "
+                        class="form-control"
+                        name="city"
+                        id="city"
+                        required=""
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <label for="validationCustom04" class="form-label"
+                        >State</label
+                      >
+                      <select
+                        class="form-select"
+                        name="state"
+                        id="state"
+                        id="validationCustom04"
+                        required=""
+                      >
+                        <option selected="" value="<%= ofmaxu.user.state %>">
+                          <%= ofmaxu.user.state %>
+                        </option>
+                        <option value="Abuja FCT">Abuja FCT</option>
+                        <option value="Abia">Abia</option>
+                        <option value="Adamawa">Adamawa</option>
+                        <option value="Akwa Ibom">Akwa Ibom</option>
+                        <option value="Anambra">Anambra</option>
+                        <option value="Bauchi">Bauchi</option>
+                        <option value="Bayelsa">Bayelsa</option>
+                        <option value="Benue">Benue</option>
+                        <option value="Borno">Borno</option>
+                        <option value="Cross River">Cross River</option>
+                        <option value="Delta">Delta</option>
+                        <option value="Ebonyi">Ebonyi</option>
+                        <option value="Edo">Edo</option>
+                        <option value="Ekiti">Ekiti</option>
+                        <option value="Enugu">Enugu</option>
+                        <option value="Gombe">Gombe</option>
+                        <option value="Imo">Imo</option>
+                        <option value="Jigawa">Jigawa</option>
+                        <option value="Kaduna">Kaduna</option>
+                        <option value="Kano">Kano</option>
+                        <option value="Katsina">Katsina</option>
+                        <option value="Kebbi">Kebbi</option>
+                        <option value="Kogi">Kogi</option>
+                        <option value="Kwara">Kwara</option>
+                        <option value="Lagos">Lagos</option>
+                        <option value="Nassarawa">Nassarawa</option>
+                        <option value="Niger">Niger</option>
+                        <option value="Ogun">Ogun</option>
+                        <option value="Ondo">Ondo</option>
+                        <option value="Osun">Osun</option>
+                        <option value="Oyo">Oyo</option>
+                        <option value="Plateau">Plateau</option>
+                        <option value="Rivers">Rivers</option>
+                        <option value="Sokoto">Sokoto</option>
+                        <option value="Taraba">Taraba</option>
+                        <option value="Yobe">Yobe</option>
+                        <option value="Zamfara">Zamfara</option>
+                        <option value="Outside Nigeria">Outside Nigeria</option>
+                      </select>
+                    </div>
+                    <br /><br />
+                    <button
+                      type="submit"
+                      onclick="Update()"
+                      class="btn btn-secondary"
+                    >
+                      Update Account
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="activity-sidebar-overlay"></div>
+
+    <script src="/static/assets/plugins/jquery/jquery-3.4.1.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="/static/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="/static/assets/plugins/perfectscroll/perfect-scrollbar.min.js"></script>
+    <script src="/static/assets/plugins/pace/pace.min.js"></script>
+    <script src="/static/assets/plugins/DataTables/datatables.min.js"></script>
+    <script src="/static/assets/js/main.min.js"></script>
+    <script src="/static/assets/js/pages/datatables.js"></script>
+    <script src="/static/assets/js/custom.js"></script>
+  </body>
+</html>

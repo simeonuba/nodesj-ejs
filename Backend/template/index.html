@@ -1,0 +1,235 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Home {% endblock title %}
+
+{% block content %}
+
+<div class="page-container">
+        {% include 'aside.html' %}
+      <div class="page-content">
+          <div class="page-header">
+            <nav class="navbar navbar-expand-lg d-flex justify-content-between">
+              <div class="header-title flex-fill">
+                <a href="index.html#" id="sidebar-toggle"><i data-feather="arrow-left"></i></a>
+                <h5>Dashboard</h5>
+              </div>
+                <div class="header-sarch">
+                <a href="{% url 'logout' %}" class="btn btn-secondary">Logout</a>
+                </div>
+             
+            </nav>
+        </div>
+                <div class="main-wrapper">
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <div class="card card-bg">
+                                <div class="card-body">
+                                    <h5 class="card-title">My Shopping Details</h5>
+                                    <p class='alert alert-danger' style='background:#b20'>use the infomations below to shop in any of UK online store</p>
+                                    <ul class="list-unstyled profile-about-list">
+                                        <li><i class="far fa-edit m-r-xxs"></i><span>Full name <a href="social.html#">Chibuke Uba Simeon</a></span></li>
+                                        <li><i class="far fa-building m-r-xxs"></i><span>Phone Number: <a href="social.html#">+416(54684)</a></span></li>
+                                        <li><i class="far fa-compass m-r-xxs"></i><span>Address <a href="social.html#">2 king william street, salford, united kingdom</a></span></li>
+                                        <li><i class="far fa-user m-r-xxs"></i><span>Followed by 320 people</span></li>
+                                        <li class="profile-about-list-buttons">
+                                            <button class="btn btn-block btn-primary m-t-md">Follow</button>
+                                            <button class="btn btn-block btn-secondary m-t-md">Message</button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-7">
+                            <div class="card card-bg">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                          <div class="card stats-card">
+                                            <div class="card-body">
+                                              <div class="stats-info">
+                                                <h5 class="card-title">0<span class="stats-change stats-change-danger"></span></h5>
+                                                <p class="stats-text">Total Orders</p>
+                                              </div>
+                                              <div class="stats-icon change-success">
+                                                <i class="material-icons">trending_up</i>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                          <div class="card stats-card">
+                                            <div class="card-body">
+                                              <div class="stats-info">
+                                                <h5 class="card-title">2<span class="stats-change stats-change-danger"></span></h5>
+                                                <p class="stats-text">Delivered</p>
+                                              </div>
+                                              <div class="stats-icon change-danger">
+                                                <i class="material-icons">place</i>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="row">
+                                        <div class="col-lg-6">
+                                          <div class="card stats-card">
+                                            <div class="card-body">
+                                              <div class="stats-info">
+                                                  <h5 class="card-title">0<span class="stats-change stats-change-success"></span></h5>
+                                                  <p class="stats-text">Pending Orders</p>
+                                              </div>
+                                              <div class="stats-icon change-primary" style='background:#fff;'>
+                                                  <i class="material-icons">flight</i>
+                                              </div>
+                                          </div>
+                                          </div>
+                                        </div>
+                                
+                                      </div>
+                                      <center>
+                                        
+                                         
+                                            <button class="btn btn-block btn-primary m-t-md">View & track all Orders</button>
+                                      </center>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="page-footer">
+                  <a href="500.html" class="page-footer-item page-footer-item-left"><i data-feather="arrow-left" class="footer-left"></i>500 Page</a>
+                  <a href="{% url 'login' %}" class="page-footer-item page-footer-item-right">Login<i data-feather="arrow-right" class="footer-right"></i></a>
+                </div>
+                                  
+                </div>
+              
+            </div>
+
+            <div class="activity-sidebar-overlay"></div>
+        <div class="activity-sidebar">
+          <a href="blank-page.html#" id="activity-sidebar-close"><i class="material-icons">close</i></a>
+          <div class="activity-header">
+            <h5>Activity Logs</h5>
+          </div>
+          <div class="activity-body">
+            <ul class="activity-list list-unstyled">
+              <li class="activity-item">
+                  <div class="activity-icon"><i class="material-icons">add</i></div>
+                  <div class="activity-text">Ann Green uploaded new item
+                      <span>This item has to be reviewed, moderators will check it soon.</span>
+                  </div>
+                  <div class="activity-helper">45min ago</div>
+              </li>
+              <li class="activity-item activity-info">
+                  <div class="activity-icon"><i class="material-icons">code</i></div>
+                  <div class="activity-text">John Doe made changes to create-invoice.js
+                      <span>57 lines of code added, 0 removals, 0 errors, 6 warnings</span>
+                  </div>
+                  <div class="activity-helper">3h ago</div>
+              </li>
+              <li class="activity-item activity-danger">
+                  <div class="activity-icon"><i class="material-icons">error_outline</i></div>
+                  <div class="activity-text">Can't retrieve data from server
+                      <span>Server is not responding, please contact provider</span>
+                  </div>
+                  <div class="activity-helper">6h ago</div>
+              </li>
+              <li class="activity-item">
+                <div class="activity-icon"><i class="material-icons">done</i></div>
+                <div class="activity-text">Files Uploaded
+                    <span>2 new files uploaded</span>
+                    <div class="mail-attachment-files">
+                      <div class="card">
+                        <img src="http://phantom-themes.com/neo/theme/images/card2.jpeg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">image.jpg</h5>
+                          <p class="card-text text-secondary">305 KB</p>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <img src="{% static 'images/card1.jpeg'%}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">image2.jpg</h5>
+                          <p class="card-text text-secondary">400 KB</p>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="activity-helper">8h ago</div>
+            </li>
+          </ul>
+          </div> 
+        </div>
+        
+        <div class="search-results">
+          <div class="container">
+              <div class="row">
+                  <div class="col-12">
+                      <div class="search-results-header">
+                          <h5>Search Results</h5>
+                          <a href="blank-page.html#" id="closeSearch"><i class="material-icons">close</i></a>
+                      </div>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-md-4">
+                      <ul class="search-result-list user-search">
+                          <li>
+                              <img src="{% static 'images/avatars/avatar2.jpeg'%}" alt="">
+                              <p>John Doe<br>(Works at <span class="search-input-value">hj</span>)</p>
+                          </li>
+                          <li>
+                              <img src="{% static 'images/avatars/avatar3.jpeg'%}" alt="">
+                              <p>Anna doe<br>(Lives in <span class="search-input-value">hj</span>)</p>
+                          </li>
+                          <li>
+                              <img src="{% static 'images/avatars/avatar4.jpeg'%}" alt="">
+                              <p>People near:<br><span class="search-input-value">hj</span></p>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-md-4">
+                      <ul class="search-result-list social-search">
+                          <li>
+                              <div class="social-search-icon facebook-icon-bg">
+                                  <i class="fab fa-facebook-f"></i>
+                              </div>
+                              <div class="social-search-text">
+                                  <p><span class="search-input-value">hj</span> on Facebook</p>
+                              </div>
+                          </li>
+                          <li>
+                              <div class="social-search-icon twitter-icon-bg">
+                                  <i class="fab fa-twitter"></i>
+                              </div>
+                              <div class="social-search-text">
+                                  <p><span class="search-input-value">hj</span> on Twitter</p>
+                              </div>
+                          </li>
+                          <li>
+                              <div class="social-search-icon google-icon-bg">
+                                  <i class="fab fa-google"></i>
+                              </div>
+                              <div class="social-search-text">
+                                  <p><span class="search-input-value">hj</span> on Google</p>
+                              </div>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-md-4">
+                      <ul class="search-result-list article-search">
+                          <li>
+                              <p>Lorem ipsum dolor sit amet, consectetur <span class="search-input-value">hj</span> adipiscing elit, sunt in culpa quifdaasd quis.</p>
+                              <span class="search-article-date">06 Jul, 2021</span>
+                          </li>
+                          <li>
+                              <p>Duis non semper sapien. Morbi imperdiet velit in <span class="search-input-value">hj</span> bibendum lobortis. Integer arcu urna, elementum in pellentesque nec, finibus at nisi.</p>
+                              <span class="search-article-date">19 Mar, 2017</span>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+{% endblock content %}
